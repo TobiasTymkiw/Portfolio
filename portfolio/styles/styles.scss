@@ -1,0 +1,57 @@
+$generalBackground: #131111;
+$generalFontColor: #f0e9d2;
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-row{
+    display: flex;
+    flex-direction:row ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@mixin responsive($device) {
+  /*MEDIA QUERIES*/
+
+  @if $device == phone-S {
+    @media screen and (max-width: 374px) {
+      @content;
+    }
+  }
+  @if $device == phone-M {
+    @media screen and (max-width: 424px) {
+      @content;
+    }
+  }
+  @if $device == phone-L {
+    @media screen and (max-width: 767px) {
+      @content;
+    }
+  }
+  @if $device == Tablet {
+    @media screen and (max-width: 1023px) {
+      @content;
+    }
+  }
+  @if $device == Laptop {
+    @media screen and (max-width: 1439px) {
+      @content;
+    }
+  }
+  @if $device == Desktop {
+    @media screen and (max-width: 2560px) {
+      @content;
+    }
+  }
+}
