@@ -2,14 +2,14 @@ import React, { Fragment } from "react";
 import LinkedinSVG from "../../assets/Home/linkedin-box-fill.svg";
 import GitHubSVG from "../../assets/Home/github-fill.svg";
 import chatImg from "../../assets/Home/message-2-line.svg";
-/* import portrait from "../../assets/Home/CV.jpg";*/
-import portrait2 from "../../assets/Home/HomeProfile.jpg";
+import portrait from "../../assets/Home/CV.jpg";
+/* import portrait2 from "../../assets/Home/HomeProfile.jpg";*/
 import styles from "./Home.module.scss";
 
 export default function Home() {
   return (
     <Fragment>
-      <section id='Home' className={styles.home}>
+      <section id="Home" className={styles.home}>
         <div className={styles.container}>
           <div className={styles.linksIcon}>
             <a
@@ -56,7 +56,7 @@ export default function Home() {
           </div>
           <div className={styles.divimg}>
             <img
-              src={portrait2}
+              src={portrait}
               alt="CV-img"
               className={styles.imgProfile}
             ></img>
