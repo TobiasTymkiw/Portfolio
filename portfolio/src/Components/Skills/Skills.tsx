@@ -10,7 +10,7 @@ export default function Skills() {
           <p>My technical level</p>
           <div className={styles.infocontainer}>
             <div className={styles.box}>
-              <h2>Front end</h2>
+              <h3>Front-End Development</h3>
               <div className={styles.groupseparation}>
                 <div className={styles.skillsgroup}>
                   <div className={styles.skillsdata}>
@@ -46,29 +46,29 @@ export default function Skills() {
                   <div className={styles.skillsdata}>
                     <img src={Medal} alt="Medal-Icon"></img>
                     <div>
-                      <h3 className={styles.skillsname}>HTML</h3>
+                      <h3 className={styles.skillsname}>Sass</h3>
                       <p>Advanced</p>
                     </div>
                   </div>
                   <div className={styles.skillsdata}>
                     <img src={Medal} alt="Medal-Icon"></img>
                     <div>
-                      <h3 className={styles.skillsname}>TypeScript</h3>
-                      <p>Beginner</p>
-                    </div>
-                  </div>
-                  <div className={styles.skillsdata}>
-                    <img src={Medal} alt="Medal-Icon"></img>
-                    <div>
-                      <h3 className={styles.skillsname}>React</h3>
+                      <h3 className={styles.skillsname}>Git</h3>
                       <p>Advanced</p>
                     </div>
                   </div>
                   <div className={styles.skillsdata}>
                     <img src={Medal} alt="Medal-Icon"></img>
                     <div>
-                      <h3 className={styles.skillsname}>JavaScript</h3>
-                      <p>Advanced</p>
+                      <h3 className={styles.skillsname}>Figma</h3>
+                      <p>Intermediate</p>
+                    </div>
+                  </div>
+                  <div className={styles.skillsdata}>
+                    <img src={Medal} alt="Medal-Icon"></img>
+                    <div>
+                      <h3 className={styles.skillsname}>NextJS</h3>
+                      <p>Intermediate</p>
                     </div>
                   </div>
                 </div>
@@ -76,16 +76,69 @@ export default function Skills() {
             </div>
             {/* SecondBox */}
             <div className={styles.box}>
-              <div className={styles.skillsgroup}>
-                <div className={styles.skillsdata}>
-                  <img src={Medal} alt="Medal-Icon"></img>
-                  <div>
-                    <h3 className={styles.skillsname}>HTML</h3>
-                    <p>Advanced</p>
+              <h3>Back-End Development</h3>
+              <div className={styles.groupseparation}>
+                <div className={styles.skillsgroup}>
+                  <div className={styles.skillsdata}>
+                    <img src={Medal} alt="Medal-Icon"></img>
+                    <div>
+                      <h3 className={styles.skillsname}>Node JS</h3>
+                      <p>Advanced</p>
+                    </div>
+                  </div>
+                  <div className={styles.skillsdata}>
+                    <img src={Medal} alt="Medal-Icon"></img>
+                    <div>
+                      <h3 className={styles.skillsname}>PostgreSQL</h3>
+                      <p>Advanced</p>
+                    </div>
+                  </div>
+                  <div className={styles.skillsdata}>
+                    <img src={Medal} alt="Medal-Icon"></img>
+                    <div>
+                      <h3 className={styles.skillsname}>Express</h3>
+                      <p>Advanced</p>
+                    </div>
+                  </div>
+                  <div className={styles.skillsdata}>
+                    <img src={Medal} alt="Medal-Icon"></img>
+                    <div>
+                      <h3 className={styles.skillsname}>Sequelize</h3>
+                      <p>Advanced</p>
+                    </div>
                   </div>
                 </div>
+                <div className={styles.skillsgroup}>
+                  <div className={styles.skillsdata}>
+                    <img src={Medal} alt="Medal-Icon"></img>
+                    <div>
+                      <h3 className={styles.skillsname}>FireBase</h3>
+                      <p>Beginner</p>
+                    </div>
+                  </div>
+                  <div className={styles.skillsdata}>
+                    <img src={Medal} alt="Medal-Icon"></img>
+                    <div>
+                      <h3 className={styles.skillsname}>Postman</h3>
+                      <p>Advanced</p>
+                    </div>
+                  </div>
+                  <div className={styles.skillsdata}>
+                    <img src={Medal} alt="Medal-Icon"></img>
+                    <div>
+                      <h3 className={styles.skillsname}>Python</h3>
+                      <p>Intermediate</p>
+                    </div>
+                  </div>
+                  {/* <div className={styles.skillsdata}>
+                    <img src={Medal} alt="Medal-Icon"></img>
+                    <div>
+                      <h3 className={styles.skillsname}>Next Tech</h3>
+                      <p>Advanced</p>
+                    </div>
+                  </div> */}
+                </div>
               </div>
-              {/* Second */}
             </div>
           </div>
         </div>
