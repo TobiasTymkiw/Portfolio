@@ -3,12 +3,12 @@ import cvSvg from "../../assets/AboutMe/file-download-line.svg";
 import styles from "./AboutMe.module.scss";
 import Portrait from "../../assets/AboutMe/HomeProfile.jpg";
 
-function AboutMe() {
+export default function AboutMe() {
   return (
     <Fragment>
-      <section id="About" className={styles.about}>
+      <section id="aboutSection" className={styles.about}>
         <div className={styles.container}>
-          <h2 className={styles.sectiontitle}>About Me</h2>
+          <h2>About Me</h2>
           <p>My introduction</p>
           <div className={styles.aboutMeContainer}>
             <div className={styles.divImg}>
@@ -40,7 +40,7 @@ function AboutMe() {
                 challenges to obtain valuable solutions.
               </p>
 
-              <a  href='../../assets/Home/CV.jpg' download='CV'>
+              <a href="../../assets/Home/CV.jpg" download="CV">
                 <button>
                   Download CV <img src={cvSvg} alt=""></img>
                 </button>
@@ -52,5 +52,3 @@ function AboutMe() {
     </Fragment>
   );
 }
-
-export default AboutMe;

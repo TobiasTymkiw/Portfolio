@@ -5,7 +5,8 @@
 }
 
 .container {
-  padding: 100px 0px 0px;
+  width: 100%;
+  @include container-width-padding;
   @include flex-column;
   align-items: center;
   cursor: default;

@@ -5,11 +5,14 @@
 }
 
 .container {
-  width: 980px;
-  padding: 100px 0px 0px;
+  @include container-width-padding;
   @include flex-column;
+  padding: 100px 0px 0px;
   align-items: center;
   cursor: default;
+  @include responsive("Tablet") {
+    padding: 100px 5vw 0px;
+  }
   h2 {
     margin: 0;
     font-weight: 600;
@@ -26,7 +29,11 @@
     width: 100%;
     justify-content: center;
     padding-top: 64px;
-    gap: 90px;
+    gap: 6vw;
+    @include responsive("Tablet") {
+      align-items: center;
+      flex-direction: column;
+    }
     .box {
       @include flex-column;
       padding: 40px 30px;
@@ -35,6 +42,10 @@
       /* Box styles */
       background: $buttonBackground;
       border-radius: 8%;
+      box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+      @include responsive("Tablet") {
+        width: 275px;
+      }
       h3 {
         font-size: 20px;
         margin: 0 0 20px;
@@ -42,6 +53,9 @@
       .groupseparation {
         @include flex-row;
         gap: 40px;
+        @include responsive("Tablet") {
+          gap: 20px;
+        }
       }
       .skillsgroup {
         width: 100%;

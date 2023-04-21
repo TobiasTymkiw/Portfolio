@@ -9,7 +9,7 @@ import styles from "./Home.module.scss";
 export default function Home() {
   return (
     <Fragment>
-      <section id="Home" className={styles.home}>
+      <section id="homeSection" className={styles.home}>
         <div className={styles.container}>
           <div className={styles.linksIcon}>
             <a

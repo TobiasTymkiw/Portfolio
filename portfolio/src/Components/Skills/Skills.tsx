@@ -4,7 +4,7 @@ import Medal from "../../assets/Skills/medal-line.svg";
 export default function Skills() {
   return (
     <>
-      <section id="Skills" className={styles.Skills}>
+      <section id="skillsSection" className={styles.Skills}>
         <div className={styles.container}>
           <h2>Skills</h2>
           <p>My technical level</p>

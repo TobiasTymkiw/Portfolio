@@ -5,6 +5,14 @@ $generalBackground: #131111;
 $buttonBackground: rgb(65, 24, 24);
 $generalFontColor: #f0e9d2;
 
+@mixin container-width-padding{
+  width: 100%;
+  padding: 100px 230px 0px;
+  @include responsive('Tablet'){
+    padding: 100px 14vw 0px;
+  }
+}
+
 @mixin section {
   display: flex;
   justify-content: center;
@@ -54,6 +62,13 @@ $generalFontColor: #f0e9d2;
       @content;
     }
   }
+
+  @if $device == phone-M-L {
+    @media screen and (max-width: 595px) {
+      @content;
+    }
+  }
+
   @if $device == phone-L {
     @media screen and (max-width: 767px) {
       @content;
