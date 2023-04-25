@@ -5,11 +5,12 @@
 }
 
 .container {
-  width: 100%;
-  @include container-width-padding;
   @include flex-column;
+  max-width: 980px;
+  padding-top: 100px;
   align-items: center;
   cursor: default;
+
   h2 {
     margin: 0;
     font-weight: 700;
@@ -26,8 +27,12 @@
 .aboutMeContainer {
   @include flex-row;
   padding: 64px 0px 30px;
-  width: 980px;
+  width: 100%;
   justify-content: space-between;
+  @include responsive("Tablet") {
+    flex-direction: column;
+    align-items: center;
+  }
   .divImg {
     width: 42%;
     height: 555px;
@@ -35,6 +40,7 @@
     border-radius: 10% 35% 35% 10%;
     position: relative;
     overflow: hidden;
+
     img {
       transform: rotate(-10deg);
       width: 550px;
@@ -42,20 +48,37 @@
       top: -140px;
       right: -5px;
     }
+    @include responsive("Tablet") {
+      border-radius: 35% 35% 35% 35%;
+      height: 360px;
+      width: 360px;
+      margin-bottom: 20px;
+      img {
+        top: -120px;
+        width: 400px;
+      }
+    }
   }
   .aboutInfo {
     @include flex-column;
     width: 52%;
     position: relative;
-
+    @include responsive("Tablet") {
+      width: 100%;
+    }
     .cardsContainer {
       @include flex-row;
       justify-content: space-between;
+      gap: 10px;
       margin: 0 0 30px 0;
+      @include responsive("Tablet") {
+        display: grid;
+      }
       .box {
         @include flex-column;
         align-items: center;
         width: 130px;
+        min-width: 130px;
         height: auto;
         background: rgb(65, 24, 24);
         border-radius: 8px;
@@ -77,6 +100,10 @@
   .aboutText {
     font-size: 20px;
     font-weight: 500;
+    @include responsive("Tablet") {
+      max-width: 70vw;
+      margin-bottom: 85px;
+    }
   }
   a {
     button {
@@ -84,6 +111,12 @@
       /* Button position */
       bottom: 0;
       position: absolute;
+      @include responsive("Tablet") {
+left:0;
+right: 0;
+margin: auto auto;
+
+      }
     }
     button:hover {
       transform: scale(1.05);

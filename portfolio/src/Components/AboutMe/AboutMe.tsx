@@ -30,21 +30,23 @@ export default function AboutMe() {
                   <p>Online 24/7</p>
                 </div>
               </div>
-              <p className={styles.aboutText}>
-                I am a very creative and curious person who enjoys taking things
-                apart and figuring out how they work. Currently, I work as a
-                Full Stack Developer and have experience working on web projects
-                that can be scaled up for team collaboration. I consider myself
-                a committed person, eager to learn, constantly pushing my
-                limits, being optimistic and perseverant. I am in search of new
-                challenges to obtain valuable solutions.
-              </p>
+              <span>
+                <p className={styles.aboutText}>
+                  I am a very creative and curious person who enjoys taking
+                  things apart and figuring out how they work. Currently, I work
+                  as a Full Stack Developer and have experience working on web
+                  projects that can be scaled up for team collaboration. I
+                  consider myself a committed person, eager to learn, constantly
+                  pushing my limits, being optimistic and perseverant. I am in
+                  search of new challenges to obtain valuable solutions.
+                </p>
 
-              <a href="../../assets/Home/CV.jpg" download="CV">
-                <button>
-                  Download CV <img src={cvSvg} alt=""></img>
-                </button>
-              </a>
+                <a href="../../assets/Home/CV.jpg" download="CV">
+                  <button>
+                    Download CV <img src={cvSvg} alt=""></img>
+                  </button>
+                </a>
+              </span>
             </div>
           </div>
         </div>

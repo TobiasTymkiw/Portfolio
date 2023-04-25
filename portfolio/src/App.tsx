@@ -9,12 +9,12 @@ export default function App(): JSX.Element {
   return (
     <>
       {/*
-       */}
       <Header></Header>
       <Home></Home>
-      <AboutMe></AboutMe>
       <Skills></Skills>
       <Qualifications></Qualifications>
+    */}
+    <AboutMe></AboutMe>
     </>
   );
 }
