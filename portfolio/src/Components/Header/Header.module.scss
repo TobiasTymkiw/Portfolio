@@ -93,8 +93,9 @@ ul li {
     transform: rotate(45deg);
   }
   .actbar:nth-child(2) {
-    position: absolute;
-    width: 0;
+    /* position: absolute;
+    width: 0; */
+    display: none;
   }
   .actbar:nth-child(3) {
     transform: rotate(-45deg);
