@@ -1,14 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Inter:wght@400;600;700&display=swap");
 
-
 $generalBackground: #131111;
 $buttonBackground: rgb(65, 24, 24);
 $generalFontColor: #f0e9d2;
 
-@mixin container-width-padding{
+@mixin container-width-padding {
   width: 100%;
   padding: 100px 230px 0px;
-  @include responsive('Tablet'){
+  @include responsive("Tablet") {
     padding: 100px 14vw 0px;
   }
 }
@@ -62,15 +61,18 @@ $generalFontColor: #f0e9d2;
       @content;
     }
   }
-
   @if $device == phone-M-L {
     @media screen and (max-width: 595px) {
       @content;
     }
   }
-
   @if $device == phone-L {
     @media screen and (max-width: 767px) {
+      @content;
+    }
+  }
+  @if $device == NavBar {
+    @media screen and (max-width: 955px) {
       @content;
     }
   }

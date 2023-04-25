@@ -13,6 +13,8 @@ export default function App(): JSX.Element {
       <AboutMe></AboutMe>
       <Skills></Skills>
       <Qualifications></Qualifications>
+      {/*
+       */}
     </>
   );
 }
