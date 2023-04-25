@@ -8,13 +8,13 @@ import Qualifications from "./Components/Qualifications/Qualifications";
 export default function App(): JSX.Element {
   return (
     <>
+      <Home></Home>
       {/*
       <Header></Header>
-      <Home></Home>
+      <AboutMe></AboutMe>
       <Skills></Skills>
       <Qualifications></Qualifications>
     */}
-    <AboutMe></AboutMe>
     </>
   );
 }

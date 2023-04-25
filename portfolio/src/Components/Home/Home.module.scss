@@ -5,11 +5,18 @@
 }
 .container {
   @include flex-row;
-  @include container-width-padding;
   padding-top: 200px;
-  justify-content: space-between;
+  width: 100%;
+  justify-content: center;
+  gap: 40px;
   height: 520px;
-
+  @include responsive("Tablet") {
+    display: grid;
+    /* grid-template: ; */
+    /* align-items: center;
+    flex-direction: column; */
+    height: auto
+  }
   .linksIcon {
     @include flex-column;
     width: 40px;
@@ -72,7 +79,7 @@
       line-height: 32px;
     }
     button {
-      @include button
+      @include button;
     }
     button:hover {
       transform: scale(1.05);
@@ -83,7 +90,7 @@
     width: 400px;
     height: 400px;
     overflow: hidden;
-    -webkit-animation: profile__animate 9s ease-in-out 1s infinite;;
+    -webkit-animation: profile__animate 9s ease-in-out 1s infinite;
     animation: profile__animate 9s ease-in-out 1s infinite;
     @keyframes profile__animate {
       0% {
