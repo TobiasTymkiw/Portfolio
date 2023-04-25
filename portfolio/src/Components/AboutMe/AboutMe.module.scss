@@ -64,6 +64,12 @@
     width: 52%;
     position: relative;
     @include responsive("Tablet") {
+      width: 58%;
+    }
+    @include responsive("phone-L") {
+      width: 80%;
+    }
+    @include responsive("phone-M-L") {
       width: 100%;
     }
     .cardsContainer {
@@ -113,7 +119,7 @@
     font-size: 20px;
     font-weight: 500;
     @include responsive("Tablet") {
-      max-width: 70vw;
+      max-width: 95vw;
       margin-bottom: 85px;
     }
   }
