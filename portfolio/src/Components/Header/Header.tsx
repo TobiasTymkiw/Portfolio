@@ -6,7 +6,7 @@ export default function Header() {
     "Home",
     "About",
     "Skills",
-    "Qualifications",
+    "Experience",
     "Projects",
     "Contact",
   ];

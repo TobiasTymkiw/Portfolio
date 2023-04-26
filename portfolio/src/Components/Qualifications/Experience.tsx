@@ -1,4 +1,4 @@
-import styles from "./Qualifications.module.scss";
+import styles from "./Experience.module.scss";
 
 export default function Qualifications() {
   const studies = [
@@ -74,9 +74,9 @@ export default function Qualifications() {
   };
   return (
     <>
-      <section id="qualificationsSection" className={styles.qualification}>
+      <section id="experienceSection" className={styles.qualification}>
         <div className={styles.container}>
-          <h2>Qualifications</h2>
+          <h2>Experiences</h2>
           <p>My personal journey</p>
           <div className={styles.timeline}>
             <div className={styles.line}></div>
