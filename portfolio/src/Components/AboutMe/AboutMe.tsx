@@ -50,10 +50,14 @@ export default function AboutMe() {
                   pushing my limits, being optimistic and perseverant. I am in
                   search of new challenges to obtain valuable solutions.
                 </p>
+<a href={`${process.env.REACT_APP_PUBLIC_URL}/CV.pdf`} download='CV'>
 
-                <button onClick={() => downloadFileAtURL(PDF_FILE)}>
+                <button
+                 //onClick={() => downloadFileAtURL(PDF_FILE)}
+                 >
                   Download CV <img src={cvSvg} alt=""></img>
                 </button>
+</a>
               </span>
             </div>
           </div>
