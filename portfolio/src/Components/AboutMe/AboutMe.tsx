@@ -3,7 +3,17 @@ import cvSvg from "../../assets/AboutMe/file-download-line.svg";
 import styles from "./AboutMe.module.scss";
 import Portrait from "../../assets/AboutMe/HomeProfile.jpg";
 
+const PDF_FILE = `${process.env.REACT_APP_PUBLIC_URL}/CV.pdf`;
+
 export default function AboutMe() {
+  const downloadFileAtURL = (url: string) => {
+    const aTag = document.createElement("a");
+    aTag.href = url;
+    aTag.setAttribute("download", "CV");
+    document.body.appendChild(aTag);
+    aTag.click();
+    aTag.remove();
+  };
   return (
     <Fragment>
       <section id="aboutSection" className={styles.about}>
@@ -41,11 +51,9 @@ export default function AboutMe() {
                   search of new challenges to obtain valuable solutions.
                 </p>
 
-                <a href="../../assets/Home/CV.jpg" download="CV">
-                  <button>
-                    Download CV <img src={cvSvg} alt=""></img>
-                  </button>
-                </a>
+                <button onClick={() => downloadFileAtURL(PDF_FILE)}>
+                  Download CV <img src={cvSvg} alt=""></img>
+                </button>
               </span>
             </div>
           </div>

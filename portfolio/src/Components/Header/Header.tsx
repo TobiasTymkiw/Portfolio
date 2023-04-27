@@ -7,7 +7,7 @@ export default function Header() {
     "About",
     "Skills",
     "Experience",
-    "Projects",
+    /* "Projects", */
     "Contact",
   ];
   const handleClickNav = (scrollToId: string) => {

@@ -128,20 +128,19 @@
       margin: auto;
     }
   }
-  a {
-    button {
-      @include button;
-      /* Button position */
-      bottom: 0;
-      position: absolute;
-      @include responsive("Tablet") {
-        left: 0;
-        right: 0;
-        margin: auto auto;
-      }
+
+  button {
+    @include button;
+    /* Button position */
+    bottom: 0;
+    position: absolute;
+    @include responsive("Tablet") {
+      left: 0;
+      right: 0;
+      margin: auto auto;
     }
-    button:hover {
-      transform: scale(1.05);
-    }
+  }
+  button:hover {
+    transform: scale(1.05);
   }
 }

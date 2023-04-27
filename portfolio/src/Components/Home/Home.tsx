@@ -7,6 +7,9 @@ import portrait from "../../assets/Home/CV.jpg";
 import styles from "./Home.module.scss";
 
 export default function Home() {
+  const handleClickNav = (scrollToId: string) => {
+    document.getElementById(scrollToId)?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <Fragment>
       <section id="homeSection" className={styles.home}>
@@ -50,7 +53,7 @@ export default function Home() {
               </p>
               {/* Contact button to that section */}
             </div>
-            <button className={styles.contactButton}>
+            <button className={styles.contactButton} onClick={()=>handleClickNav('contactSection')}>
               Contact Me! <img src={chatImg} alt="Message-Icon"></img>
             </button>
           </div>
