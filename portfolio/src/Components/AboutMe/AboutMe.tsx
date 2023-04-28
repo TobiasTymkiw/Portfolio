@@ -41,7 +41,7 @@ export default function AboutMe() {
                   search of new challenges to obtain valuable solutions.
                 </p>
                 <a
-                  href={`${process.env.REACT_APP_PUBLIC_URL}/CV.pdf`}
+                  href={`${process.env.REACT_APP_PUBLIC_URL}/CV-TobiasTymkiw.pdf`}
                   download="CV-TobiasTymkiw"
                 >
                   <button>
