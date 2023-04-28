@@ -57,7 +57,7 @@ $generalFontColor: #f0e9d2;
     }
   }
   @if $device == phone-M {
-    @media screen and (max-width: 424px) {
+    @media screen and (max-width: 435px) {
       @content;
     }
   }

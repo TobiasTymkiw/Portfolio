@@ -35,7 +35,8 @@
     width: 4px;
     background: rgb(146, 58, 58);
     z-index: 3;
-    opacity: 0.5;
+    opacity: 0.7;
+    transition: 0.3s;
     @include responsive("phone-L") {
       margin: 0px 0px 0px 25%;
     }
@@ -47,6 +48,7 @@
     padding: 0;
     position: relative;
     width: 50%;
+    transition: 0.2s;
     @include responsive("phone-L") {
       width: 70%;
     }
@@ -57,6 +59,7 @@
   .right {
     position: relative;
     right: -50%;
+    transition: .2s;
     @include responsive("phone-L") {
       left: 25%;
     }
@@ -67,6 +70,7 @@
   .left {
     position: relative;
     left: 0;
+    transition: .2s;
     @include responsive("phone-L") {
       left: 25%;
     }
@@ -82,14 +86,17 @@
     border-radius: 50%;
     top: 10%;
     z-index: 4;
+    transition: 0.2s;
   }
   .pright {
+    transition: 0.2s;
     left: -10px;
     @include responsive("phone-L") {
       left: -8px;
     }
   }
   .pleft {
+    transition: 0.2s;
     right: -10px;
     @include responsive("phone-L") {
       left: -8px;
@@ -102,6 +109,7 @@
     /* background: rgb(146, 58, 58); */
     border-radius: 6px;
     font-size: 15px;
+    transition: 0.2s;
     @include responsive("phone-L") {
       padding-bottom: 40px;
     }

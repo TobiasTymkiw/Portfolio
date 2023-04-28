@@ -7,6 +7,12 @@ import imgMail from "../../assets/Contact/mail-send-line.svg";
 import imgWhats from "../../assets/Contact/whatsapp-line.svg";
 import imgArrow from "../../assets/Contact/arrow-right-line.svg";
 
+interface infoform {
+  firstName: string,
+  email: string,
+  message: string
+} 
+
 export default function Contact() {
   const cardsInfo = [
     {
@@ -31,7 +37,7 @@ export default function Contact() {
     formState: { isSubmitSuccessful },
   } = useForm({ defaultValues: { firstName: "", email: "", message: "" } });
 
-  const onSubmit = (data: object) => {
+  const onSubmit = (data:infoform) => {
     handleSubmitFireBase(data);
   };
   useEffect(() => {
@@ -119,14 +125,6 @@ export default function Contact() {
                       })}
                     ></textarea>
                   </div>
-                  {/* <input className={styles.messageInput}
-                    type="text"
-                    placeholder="Insert your message..."
-                    {...register("message", {
-                      required: true,
-                      minLength: 10,
-                    })}
-                  /> */}
                   {errors.message?.type === "required" && (
                     <p className={styles.error}>This field is required</p>
                   )}

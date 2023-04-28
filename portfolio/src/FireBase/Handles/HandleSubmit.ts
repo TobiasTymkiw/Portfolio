@@ -1,6 +1,14 @@
 import { addDoc, collection } from "@firebase/firestore";
 import { firestore } from "../fireBaseSetup";
-const handleSubmitFireBase = (infoform) => {
+import Swal from "sweetalert2";
+
+interface infoform {
+  firstName: string,
+  email: string,
+  message: string
+}
+
+const handleSubmitFireBase = (infoform: infoform) => {
   const ref = collection(firestore, "Messages from Portfolio"); // Firebase creates this automatically
   let data = {
     Name: infoform.firstName,
@@ -10,11 +18,19 @@ const handleSubmitFireBase = (infoform) => {
   try {
     addDoc(ref, data).then((ref) => {
       console.log("Document has been added successfully");
-      alert('Message sent successfully')
-    });
+      Swal.fire({
+        title: 'Good job!',
+        text: 'The message has been sent successfully!',
+        icon: 'success',
+      })
+    })
   } catch (err) {
     console.log(err);
-    alert('Message not sent successfully')
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Something went wrong!',
+    })
   }
 };
 export default handleSubmitFireBase;
