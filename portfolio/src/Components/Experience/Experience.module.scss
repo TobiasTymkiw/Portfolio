@@ -59,7 +59,7 @@
   .right {
     position: relative;
     right: -50%;
-    transition: .2s;
+    transition: 0.2s;
     @include responsive("phone-L") {
       left: 25%;
     }
@@ -70,7 +70,7 @@
   .left {
     position: relative;
     left: 0;
-    transition: .2s;
+    transition: 0.2s;
     @include responsive("phone-L") {
       left: 25%;
     }
@@ -82,7 +82,7 @@
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: wheat;
+    background-color: #f0e9d2;
     border-radius: 50%;
     top: 10%;
     z-index: 4;
