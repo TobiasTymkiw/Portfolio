@@ -5,6 +5,7 @@ import AboutMe from "./Components/AboutMe/AboutMe";
 import Skills from "./Components/Skills/Skills";
 import Qualifications from "./Components/Experience/Experience";
 import Contact from "./Components/Contact/Contact";
+import Footer from "./Components/Footer/Footer";
 
 export default function App(): JSX.Element {
   return (
@@ -15,6 +16,7 @@ export default function App(): JSX.Element {
       <Skills></Skills>
       <Qualifications></Qualifications>
       <Contact></Contact>
+      <Footer></Footer>
     </>
   );
 }
