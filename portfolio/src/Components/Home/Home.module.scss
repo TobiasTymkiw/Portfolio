@@ -108,8 +108,8 @@
     width: 400px;
     height: 400px;
     overflow: hidden;
-    -webkit-animation: profile__animate 9s ease-in-out 1s infinite;
-    animation: profile__animate 9s ease-in-out 1s infinite;
+    -webkit-animation: profile__animate 9s ease-in-out 0s infinite;
+    animation: profile__animate 9s ease-in-out 0s infinite;
     @keyframes profile__animate {
       0% {
         border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
