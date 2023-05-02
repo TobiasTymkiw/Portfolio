@@ -53,7 +53,10 @@ export default function Home() {
               </p>
               {/* Contact button to that section */}
             </div>
-            <button className={styles.contactButton} onClick={()=>handleClickNav('contactSection')}>
+            <button
+              className={styles.contactButton}
+              onClick={() => handleClickNav("contactSection")}
+            >
               Contact Me! <img src={chatImg} alt="Message-Icon"></img>
             </button>
           </div>

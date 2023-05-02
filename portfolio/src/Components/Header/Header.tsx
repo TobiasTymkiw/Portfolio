@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Header.module.scss";
+import { Link } from "react-scroll";
 
 export default function Header() {
   const navLinks = [
@@ -10,44 +11,58 @@ export default function Header() {
     /* "Projects", */
     "Contact",
   ];
-  const handleClickNav = (scrollToId: string) => {
-    document.getElementById(scrollToId)?.scrollIntoView({ behavior: "smooth" });
-  };
+
   const renderNavLink = (content: string) => {
     const scrollToId = `${content.toLocaleLowerCase()}Section`;
 
     return (
       <li key={content}>
-        <button
+        <Link
+          activeClass={styles.active}
           className={styles.button}
-          onClick={() => handleClickNav(scrollToId)}
+          to={scrollToId}
+          spy={true}
+          smooth={true}
+          duration={450}
         >
           {content}
-        </button>
+          <span className={styles.line}></span>
+        </Link>
       </li>
     );
   };
 
   const [selected, setSelected] = useState(false);
   const handleSelect = (selected: boolean) => {
-    setSelected(!selected); 
+    setSelected(!selected);
   };
 
   return (
-    <header className={styles.header}>
+    <header id="header" className={styles.header}>
       <nav className={styles.nav}>
         <label onClick={() => handleSelect(selected)} className={styles.burger}>
-          <span className={`${styles.bar} ${selected ? styles.actbar : ''}`}></span>
-          <span className={`${styles.bar} ${selected ? styles.actbar : ''}`}></span>
-          <span className={`${styles.bar} ${selected ? styles.actbar : ''}`}></span>
+          <span
+            className={`${styles.bar} ${selected ? styles.actbar : ""}`}
+          ></span>
+          <span
+            className={`${styles.bar} ${selected ? styles.actbar : ""}`}
+          ></span>
+          <span
+            className={`${styles.bar} ${selected ? styles.actbar : ""}`}
+          ></span>
         </label>
-        <button
+        <Link
+          activeClass={styles.active}
           className={styles.button}
-          onClick={() => handleClickNav("homeSection")}
+          to="homeSection"
+          spy={true}
+          smooth={true}
+          duration={450}
         >
           FullStack Developer
-        </button>
-        <ul className={`${styles.ul} ${selected ? styles.f :''}`}>
+          <span style={{ height: "3px" }}></span>
+        </Link>
+        <ul className={`${styles.ul} ${selected ? styles.f : ""}`}>
           {navLinks.map((nav) => renderNavLink(nav))}
         </ul>
       </nav>
