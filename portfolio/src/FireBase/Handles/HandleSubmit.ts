@@ -17,11 +17,15 @@ const handleSubmitFireBase = (infoform: infoform) => {
   };
   try {
     addDoc(ref, data).then((ref) => {
-      console.log("Document has been added successfully");
       Swal.fire({
-        title: 'Good job!',
-        text: 'The message has been sent successfully!',
-        icon: 'success',
+        icon: "success",
+        title: "Good job!",
+        text: "The message has been sent successfully!",
+        background: "#131111",
+        timer: 1800,
+        confirmButtonColor: "rgb(65, 24, 24)",
+        allowOutsideClick: false,
+        showConfirmButton: false,
       })
     })
   } catch (err) {
@@ -30,6 +34,11 @@ const handleSubmitFireBase = (infoform: infoform) => {
       icon: 'error',
       title: 'Oops...',
       text: 'Something went wrong!',
+      background: "#131111",
+      timer: 1500,
+      confirmButtonColor: "rgb(65, 24, 24)",
+      allowOutsideClick: false,
+      showConfirmButton: false,
     })
   }
 };
