@@ -9,7 +9,7 @@ interface infoform {
 }
 
 const handleSubmitFireBase = (infoform: infoform) => {
-  const ref = collection(firestore, "Messages from Portfolio"); // Firebase creates this automatically
+  const ref = collection(firestore, "messagesFromPortfolio"); // Firebase creates this automatically
   let data = {
     Name: infoform.firstName,
     Email: infoform.email,
@@ -27,19 +27,21 @@ const handleSubmitFireBase = (infoform: infoform) => {
         allowOutsideClick: false,
         showConfirmButton: false,
       })
+    }, (ref) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: ref//'Something went wrong!
+        ,
+        background: "#131111",
+       //timer: 1800,
+        confirmButtonColor: "rgb(65, 24, 24)",
+        allowOutsideClick: false,
+        //showConfirmButton: false,
+      })
     })
   } catch (err) {
-    console.log(err);
-    Swal.fire({
-      icon: 'error',
-      title: 'Oops...',
-      text: 'Something went wrong!',
-      background: "#131111",
-      timer: 1500,
-      confirmButtonColor: "rgb(65, 24, 24)",
-      allowOutsideClick: false,
-      showConfirmButton: false,
-    })
+    console.log(err)
   }
 };
 export default handleSubmitFireBase;
