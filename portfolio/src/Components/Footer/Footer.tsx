@@ -1,7 +1,7 @@
 import styles from "./Footer.module.scss";
 import LinkedinSVG from "../../assets/Home/linkedin-box-fill.svg";
 import GitHubSVG from "../../assets/Home/github-fill.svg";
-
+import cvSvg from "../../assets/AboutMe/file-download-line.svg";
 export default function Footer() {
   const navLinks = [
     "About",
@@ -42,6 +42,7 @@ export default function Footer() {
   const renderLinkIcon = (content: (typeof linkIcons)[0]) => {
     return (
       <a
+        className={styles.aLink}
         key={content.ref}
         href={content.ref}
         target="_blank"
@@ -66,6 +67,15 @@ export default function Footer() {
           </ul>
           <div className={styles.linksIcon}>
             {linkIcons.map((link) => renderLinkIcon(link))}
+            <a
+              className={styles.a}
+              href={`${process.env.REACT_APP_PUBLIC_URL}/CV-TobiasTymkiw.pdf`}
+              download="CV-TobiasTymkiw"
+            >
+              <button className={styles.button}>
+                Download CV <img src={cvSvg} alt="Dowload Icon"></img>
+              </button>
+            </a>
           </div>
           <span>©Copyright 2023. All rigths reserved</span>
         </div>

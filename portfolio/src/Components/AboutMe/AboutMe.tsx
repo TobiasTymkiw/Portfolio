@@ -45,7 +45,7 @@ export default function AboutMe() {
                   download="CV-TobiasTymkiw"
                 >
                   <button>
-                    Download CV <img src={cvSvg} alt=""></img>
+                    Download CV <img src={cvSvg} alt="Download CV"></img>
                   </button>
                 </a>
               </span>

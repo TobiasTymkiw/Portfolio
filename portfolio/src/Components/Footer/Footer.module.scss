@@ -3,7 +3,7 @@
 .footer {
   display: flex;
   justify-content: center;
-  padding: 42px 0px 96px;
+  padding: 42px 0px 46px;
   background: $buttonBackground;
 
   .container {
@@ -17,7 +17,7 @@
     }
     ul {
       list-style: none;
-      margin: 0 0 32px;
+      margin: 0 0 30px;
       padding: 0;
       display: flex;
       align-items: center;
@@ -49,30 +49,63 @@
       }
     }
     .linksIcon {
-      @include flex-row;
-      width: 40px;
-      justify-content: center;
-      gap: 30px;
-      margin-bottom: 72px;
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      grid-template-rows: repeat(1, auto);
 
-      a {
+      grid-gap: 15px;
+      margin-bottom: 30px;
+
+      .aLink {
         margin: 0;
         width: 40px;
         height: 40px;
         overflow: visible;
-      }
 
-      img {
-        cursor: pointer;
-        width: 40px;
-        transition-duration: 0.7s;
-      }
-      img:hover {
-        transform: scale(1.5);
+        img {
+          cursor: pointer;
+          width: 40px;
+          transition-duration: 0.7s;
+        }
+        img:hover {
+          transform: scale(1.5);
+        }
       }
     }
     span {
       color: #a8a8a8;
+    }
+  }
+  .a {
+    display: flex;
+    text-decoration: none;
+    grid-column: 2/2;
+    grid-row: 1/1;
+    padding: 1px 0px;
+
+    .button {
+      font-size: 18px;
+      font-weight: 700;
+
+      border: #f0e9d2 2px solid;
+      border-radius: 8px;
+      /* background-color: #131111; */
+      background-color: $buttonBackground;
+      color: #f0e9d2;
+
+      display: flex;
+      align-items: center;
+      transition: 0.4s;
+      padding: 0px 12px;
+      gap: 8px;
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+    button:hover {
+      transform: scale(1.1);
     }
   }
 }
