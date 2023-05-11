@@ -30,25 +30,14 @@
   @include responsive("NavBar") {
     align-items: baseline;
     flex-direction: column;
-    width: 170px;
-    //with projects
-    //height: 240px;
-    //without projects
-    height: 195px;
-    gap: 5px;
+    width: 250px;
+    height: calc(100vh - 85px);
+    padding-top: 25px;
+    gap: 15px;
     position: absolute;
     top: 65px;
-    left: -200px;
+    left: -255px;
     border-radius: 0 0 50px 0;
-
-    /* display: grid;
-    height: 120px;
-    width: 100%;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(3, 50px);
-    position: absolute;
-    top:-170px; */
-
     transition: 0.5s;
     background: $generalBackground;
     /* box-shadow: rgba(67, 71, 85, 0.27) 0px 5px 0.25em,
@@ -58,9 +47,12 @@
       -4px 0px 4px -4px rgba(90, 125, 188, 0.05),
       0px -4px 4px -4px rgba(0, 0, 0, 0);
   }
+  @include responsive("phone-M-L") {
+    width: 70%;
+    left: -71%;
+  }
 }
 .f {
-  /* top:68px */
   left: 0;
 }
 
@@ -69,8 +61,9 @@ ul li {
 }
 
 .button {
+  position: relative;
   background-color: $generalBackground;
-  color: #f0e9d2;
+  color: $generalFontColor;
   text-decoration: none;
   font-size: 18px;
   font-weight: 800;
@@ -84,7 +77,7 @@ ul li {
   .line {
     width: 0;
     height: 1px;
-    background: #f0e9d2;
+    background: $generalFontColor;
     transition: 0.4s;
   }
 }
@@ -116,7 +109,7 @@ ul li {
     width: 35px;
     height: 4px;
     margin-bottom: 10px;
-    background-color: #f0e9d2;
+    background-color: $generalFontColor;
     border-radius: 10%;
     transition: 0.4s;
     position: relative;

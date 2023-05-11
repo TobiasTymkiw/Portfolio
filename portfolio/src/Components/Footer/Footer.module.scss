@@ -27,7 +27,7 @@
         align-items: center;
         /* height: 37px; */
         background-color: $buttonBackground;
-        color: #f0e9d2;
+        color: $generalFontColor;
         text-decoration: none;
         font-size: 18px;
         font-weight: 800;
@@ -37,7 +37,7 @@
         .line {
           width: 0;
           height: 1px;
-          background: #f0e9d2;
+          background: $generalFontColor;
           transition: 0.4s;
         }
       }
@@ -87,11 +87,11 @@
       font-size: 18px;
       font-weight: 700;
 
-      border: #f0e9d2 2px solid;
+      border: $generalFontColor 2px solid;
       border-radius: 8px;
       /* background-color: #131111; */
       background-color: $buttonBackground;
-      color: #f0e9d2;
+      color: $generalFontColor;
 
       display: flex;
       align-items: center;
