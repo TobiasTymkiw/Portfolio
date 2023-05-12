@@ -31,6 +31,7 @@
     align-items: baseline;
     flex-direction: column;
     width: 250px;
+    -ms-height:calc(100vh - 85px);
     height: calc(100vh - 85px);
     padding-top: 25px;
     gap: 15px;
@@ -129,5 +130,22 @@ ul li {
     top: -14px;
     position: relative;
     transform: rotate(-45deg);
+  }
+}
+
+.downloadButton {
+  display: none;
+  @include responsive("NavBar") {
+    display: inline;
+  }
+  button {
+    @include button;
+    /* Button position */
+    position: absolute;
+    bottom: 58px;
+    width: calc(100% - 61px);
+  }
+  button:hover {
+    transform: scale(1.05);
   }
 }
