@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Header.module.scss";
 import { Link } from "react-scroll";
+import cvSvg from "../../assets/AboutMe/file-download-line.svg";
 
 export default function Header() {
   const navLinks = [
@@ -23,7 +24,8 @@ export default function Header() {
           to={scrollToId}
           spy={true}
           smooth={true}
-          duration={450}
+          duration={900}
+          offset={5}
         >
           {content}
           <span className={styles.line}></span>
@@ -57,13 +59,25 @@ export default function Header() {
           to="homeSection"
           spy={true}
           smooth={true}
-          duration={450}
+          duration={900}
+          offset={5}
         >
           FullStack Developer
           <span style={{ height: "3px" }}></span>
         </Link>
         <ul className={`${styles.ul} ${selected ? styles.f : ""}`}>
           {navLinks.map((nav) => renderNavLink(nav))}
+          <li>
+            <a
+              className={styles.downloadButton}
+              href={`${process.env.REACT_APP_PUBLIC_URL}/CV-TobiasTymkiw.pdf`}
+              download="CV-TobiasTymkiw"
+            >
+              <button>
+                Download CV <img src={cvSvg} alt="Download CV"></img>
+              </button>
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
