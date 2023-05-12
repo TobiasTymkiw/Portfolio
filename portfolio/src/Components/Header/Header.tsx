@@ -26,7 +26,6 @@ export default function Header() {
           smooth={true}
           duration={900}
           offset={5}
-          ignoreCancelEvents={true}
         >
           {content}
           <span className={styles.line}></span>
@@ -60,7 +59,8 @@ export default function Header() {
           to="homeSection"
           spy={true}
           smooth={true}
-          duration={450}
+          duration={900}
+          offset={5}
         >
           FullStack Developer
           <span style={{ height: "3px" }}></span>
