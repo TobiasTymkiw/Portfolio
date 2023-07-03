@@ -8,6 +8,9 @@
   @include container-width-padding;
   align-items: center;
   cursor: default;
+  a{
+    color: inherit;
+  }
   h2 {
     margin: 0;
     font-weight: 700;

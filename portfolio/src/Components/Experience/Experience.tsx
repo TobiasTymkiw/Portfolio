@@ -1,6 +1,11 @@
 import styles from "./Experience.module.scss";
 
 export default function Qualifications() {
+  const present =
+    Date().split(" ").splice(1, 3)[0] +
+    ". " +
+    Date().split(" ").splice(1, 3)[2];
+
   const studies = [
     {
       title: "Fundamentals of Programming",
@@ -25,6 +30,14 @@ export default function Qualifications() {
       time: "Mar. 2023 - Apr. 2023",
       where: "Proyment",
       position: "right",
+      href:'https://proyment.com'
+    },
+    {
+      title: "Spaceos WebPage Work Experience",
+      time: `May. 2023 - ${present}`,//////////////////////PRESENTT
+      where: "Proyment",
+      position: "left",
+      href: "https://www.spaceos.com.pe",
     },
     /* {
       title: "Something5",
@@ -57,15 +70,23 @@ export default function Qualifications() {
       position: "left",
     }, */
   ];
-  const renderView = (content: typeof studies[0]) => {
+  const renderView = (content: (typeof studies)[0]) => {
     return (
       <div
         key={content.title}
         className={`${styles.container} ${styles[`${content.position}`]}`}
       >
-        <div className={`${styles.point} ${styles[`p${content.position}`]}`}></div>
+        <div
+          className={`${styles.point} ${styles[`p${content.position}`]}`}
+        ></div>
         <div className={styles.textbox}>
-          <h2>{content.title}</h2>
+          {content.href ? (
+            <a href={content.href} target="_blank" rel="noreferrer">
+              <h2>{content.title}</h2>
+            </a>
+          ) : (
+            <h2>{content.title}</h2>
+          )}
           <small>{content.time}</small>
           <p>{content.where}</p>
         </div>
@@ -74,6 +95,7 @@ export default function Qualifications() {
   };
   return (
     <>
+      {console.log(present)}
       <section id="experienceSection" className={styles.qualification}>
         <div className={styles.container}>
           <h2>Experiences</h2>
